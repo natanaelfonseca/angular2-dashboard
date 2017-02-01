@@ -1,0 +1,26 @@
+<!-- navbar component -->
+
+<app-navbar></app-navbar>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/cadastro']">Cadastro</a></li>
+            <li><a [routerLink]="['/detalhes']">Detalhes</a></li>
+
+            <!--
+            <li><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Cadastro</a></li>
+            <li><a href="#">Detalhes</a></li>
+            -->
+
+          </ul>
+        </div>
+
+        <router-outlet></router-outlet>       
+
+    </div>
+ </div>

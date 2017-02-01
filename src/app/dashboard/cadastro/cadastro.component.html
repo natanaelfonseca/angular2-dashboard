@@ -1,0 +1,20 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<h2 class="sub-header">{{titulo}}</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Nome do Livro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let livro of livros" >
+        <td>{{ livro.id }}</td>
+        <td>{{ livro.nome }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

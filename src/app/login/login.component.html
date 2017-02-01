@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="login-container">
+            <div id="output"></div>
+            <div class="avatar"></div>
+            <!-- 
+            <div class="form-box">                
+                <form action="" method="" novalidate>
+                    <input name="user" type="text" placeholder="username">
+                    <input type="password" placeholder="password">
+                    
+                </form>
+            </div>
+            -->
+            A data atual é: {{ dataAtual | date: 'medium' }}
+
+            <button class="btn btn-info btn-block login" type="button" (click)="logar()">Login</button>
+            
+        </div>
+</div>

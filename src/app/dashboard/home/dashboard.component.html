@@ -1,0 +1,6 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <h1 class="page-header">Dashboard {{ livro | json }}</h1>
+  <div class="row placeholders">    
+    <app-card *ngFor="let livro of livros" [titulo]="livro.nome" [urlImagem]="livro.urlImg" [id]="livro.id"></app-card>
+  </div>
+</div>
