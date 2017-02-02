@@ -12,8 +12,11 @@ export class LivroService{
     }
 
     consultarTodos(){
-        console.log('Testando debug....');
         return this._livros;
+    }
+
+    incluir( novoLivro: Livro ){
+        this._livros.push( novoLivro );
     }
 
 }

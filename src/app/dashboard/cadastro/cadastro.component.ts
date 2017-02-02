@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { LivroService } from './../../services/livro.service';
+import { Livro } from './../../model/livro';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,11 +10,35 @@ import { LivroService } from './../../services/livro.service';
 })
 export class CadastroComponent {
 
-  titulo = "Cadastro de Livros";
+  //Dados da tabela
   livros;
 
-  constructor(lService: LivroService) {
+  cadastroGroup = new FormGroup( {
+    id: new FormControl(),
+    nome: new FormControl(),
+    url: new FormControl(),
+   } );
+
+  constructor(private lService: LivroService) {
     this.livros = lService.consultarTodos();
+  }
+
+  exibirDados(){
+    this.cadastroGroup.valueChanges.subscribe( ( data ) => {
+      console.log( data );
+    } );
+  }
+
+  onSubmit() {
+
+    let novoLivro = new Livro(
+       this.cadastroGroup.get('id').value,
+       this.cadastroGroup.get('nome').value,
+       this.cadastroGroup.get('url').value
+    );
+
+    this.lService.incluir( novoLivro );
+
   }
 
 }

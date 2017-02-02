@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from './../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,20 @@ export class LoginComponent  {
 
   dataAtual = Date.now();
 
-  constructor(private _router:Router) {}
+  constructor(private _router:Router,
+              private _loginService: LoginService){}
 
-  logar(){
-    sessionStorage.setItem("logado", "true" );
-    this._router.navigate(['']);
+  tratarFormulario( dataForm ){
+
+    let isLogged = this._loginService.logarUsuario( dataForm.user,
+                                                   dataForm.password );
+
+    if( isLogged ){
+      this._router.navigate(['/main/home']);
+    }else{
+      alert("Dados de login incorretos.");
+    }
+
   }
 
 }

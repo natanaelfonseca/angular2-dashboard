@@ -8,13 +8,7 @@ import { LoginComponent } from './login/login.component';
 
 export const rotas: Routes = [
     {
-        path: '', component: MainComponent, canActivate: [LoginCanActivate],
-        children: [
-            { path: '', component: DashboardComponent },
-            { path: 'home', component: DashboardComponent },
-            { path: 'cadastro', component: CadastroComponent },
-            { path: 'detalhes', component: DetalhesComponent }
-        ]
+        path: '', redirectTo: "/main/home", pathMatch: 'full',
     },
     {
         path: 'main', component: MainComponent, canActivate: [LoginCanActivate],

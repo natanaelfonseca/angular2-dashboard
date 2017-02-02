@@ -12,10 +12,10 @@ import 'rxjs/add/operator/switchMap';
 export class DashboardComponent {
 
   livros;
+  titulo: string = "Dashboard";
 
   constructor( lService: LivroService ){
     this.livros = lService.consultarTodos();
-    console.log( this.livros );
   }
-
+  
 }

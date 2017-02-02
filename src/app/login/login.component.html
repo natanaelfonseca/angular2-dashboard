@@ -1,19 +1,15 @@
 <div class="container">
-	<div class="login-container">
+
+    <form #f="ngForm" (ngSubmit)="tratarFormulario(f.value)">
+
+    	<div class="login-container">
             <div id="output"></div>
             <div class="avatar"></div>
-            <!-- 
-            <div class="form-box">                
-                <form action="" method="" novalidate>
-                    <input name="user" type="text" placeholder="username">
-                    <input type="password" placeholder="password">
-                    
-                </form>
+            <div class="form-box">       
+                <input name="user" type="text" ngModel>
+                <input type="password" name="password" ngModel>
             </div>
-            -->
-            A data atual é: {{ dataAtual | date: 'medium' }}
-
-            <button class="btn btn-info btn-block login" type="button" (click)="logar()">Login</button>
-            
+            <button class="btn btn-info btn-block login" type="submit">Login</button>            
         </div>
+    </form> 
 </div>
