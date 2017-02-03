@@ -2,22 +2,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { CadastroComponent } from './cadastro.component';
 
-describe('CadastroComponent', () => {
+import { WebsocketComponent } from './websocket.component';
 
-  let component: CadastroComponent;
-  let fixture: ComponentFixture<CadastroComponent>;
+describe('WebsocketComponent', () => {
+  let component: WebsocketComponent;
+  let fixture: ComponentFixture<WebsocketComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CadastroComponent ]
+      declarations: [ WebsocketComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CadastroComponent);
+    fixture = TestBed.createComponent(WebsocketComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

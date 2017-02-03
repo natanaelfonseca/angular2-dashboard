@@ -10,7 +10,9 @@ import { rotas } from './app.routing';
 import { EditoraService } from './services/editora.service';
 import { AutorService } from './services/autor.service';
 import { LivroService } from './services/livro.service';
+import { LivrosRESTService } from './services/livros.rest.service';
 import { LoginService } from './services/login.service';
+import { WebSocketService } from './services/websocket.service';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { LoginCanActivate } from './login/login.activate';
@@ -35,7 +37,10 @@ import { LoginCanActivate } from './login/login.activate';
     EditoraService,
     AutorService,
     LivroService,
-    LoginService
+    LivrosRESTService,
+    LoginService,
+    LivrosRESTService,
+    WebSocketService
   ],
   bootstrap: [AppComponent]
 })

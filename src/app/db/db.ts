@@ -1,4 +1,5 @@
 import { Livro } from './../model/livro';
+import { Http } from '@angular/http';
 
 export const livros: Livro[] = [
     {

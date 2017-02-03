@@ -1,0 +1,23 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<form #f="ngForm" (ngSubmit)="tratarFormulario(f.value)" id="formWebsocket">
+  
+  <div class="form-group">
+    <label for="msg" class="col-sm-1 control-label text-left">Msg:</label>
+    <div class="col-sm-11">
+      <input type="text" name="msg" class="form-control" ngModel>
+    </div>
+ </div>
+
+  <div class="form-group">  
+    <div class="col-sm-offset-10 col-sm-12">
+      <button type="submit" class="btn btn-default">Enviar</button>
+    </div>                      
+  </div> 
+  </form>
+
+  <div>
+    {{ respostaWs }}
+  </div>
+
+</div>
