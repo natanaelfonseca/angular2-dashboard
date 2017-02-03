@@ -5,7 +5,7 @@ export class Dashboardang2Page {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getLoginForm() {
+    return element(by.id('formlogin'));
   }
 }
