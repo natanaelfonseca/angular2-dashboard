@@ -1,9 +1,9 @@
-# angular2-dashboard
+# Livraria Virtual
 
 Este projeto contém o código fonte do projeto final do curso de Angular 2
 ministrado pelo professor Natanael Fonseca.
 
-Trata-se de uma aplicação exemplo que apresenta o framework Angualar 2
+Trata-se de uma aplicação exemplo que apresenta o framework Angular 2
 de forma simples e rápida, aqui é possível encontrar recursos como 
 rotas, pipes, services além de chamadas a serviços HTTP.
 
